@@ -1,0 +1,26 @@
+name: DotnetSixProjectBuilder
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+        include-prerelease: true  
+        
+    # CustomerSet.Find.InOut.csproj
+    
+    - name: Restore NewSearilisationTester.csproj
+      run: dotnet restore ./src/*/NewSearilisationTester.csproj
+
+    - name: Build NewSearilisationTester.csproj
+      run: dotnet build ./src/*/NewSearilisationTester.csproj --no-restore  -c Release
+
+    - name: Run NewSearilisationTester.csproj
+      run: dotnet run ./src/*/NewSearilisationTester.csproj --no-restore  -c Release
