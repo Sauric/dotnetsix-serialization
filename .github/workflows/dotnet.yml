@@ -16,11 +16,11 @@ jobs:
         
     # CustomerSet.Find.InOut.csproj
     
-    - name: Restore NewSearilisationTester.csproj
-      run: dotnet restore ./src/*/NewSearilisationTester.csproj
+    - name: Restore NewSearilizationTester.csproj
+      run: dotnet restore ./src/*/NewSearilizationTester.csproj
 
-    - name: Build NewSearilisationTester.csproj
-      run: dotnet build ./src/*/NewSearilisationTester.csproj --no-restore  -c Release
+    - name: Build NewSearilizationTester.csproj
+      run: dotnet build ./src/*/NewSearilizationTester.csproj --no-restore  -c Release
 
-    - name: Run NewSearilisationTester.csproj
-      run: dotnet run ./src/*/NewSearilisationTester.csproj --no-restore  -c Release
+    - name: Run NewSearilizationTester.csproj
+      run: dotnet run ./src/*/NewSearilizationTester.csproj --no-restore  -c Release
