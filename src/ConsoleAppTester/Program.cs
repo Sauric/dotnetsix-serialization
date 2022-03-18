@@ -1,9 +1,10 @@
-﻿using System.Data;
-using System.Diagnostics;
-using System.Runtime.Serialization.Formatters.Binary;
+﻿using DataTablePrettyPrinter;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Text;
 using System.Text.Json;
-using DataTablePrettyPrinter;
 
 namespace JsonSerialization;
 

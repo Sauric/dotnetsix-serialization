@@ -1,7 +1,11 @@
 ﻿using Newtonsoft.Json;
 using PrimeFuncPack;
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+using System.IO;
+using System.Linq;
 using System.Text;
 using System.Text.Json;
 
@@ -87,7 +91,7 @@ static class SpeedTestHelper
     public static void SerializerNewDel(Utf8JsonWriter writer, IReadOnlyCollection<TargetObject> targetObjects)
         => 
         Pipeline.Pipe(
-            TargetObjectSpeedUp.Default?.IReadOnlyCollectionTargetObject?.Serialize ?? throw new ArgumentNullException("Serialise"))
+            TargetObjectSpeedUp.Default?.IReadOnlyCollectionTargetObject?.SerializeHandler ?? throw new ArgumentNullException("Serialise"))
         .Invoke(writer, targetObjects);
 
     public static void SerializerOldDel(Utf8JsonWriter writer, IReadOnlyCollection<TargetObject> targetObjects)

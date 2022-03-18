@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>SerializationBenchmark.GlobalSerializatorBenchmarker-20220315-203101</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.22567
+Unknown processor
+.NET SDK=6.0.100
+  [Host]     : .NET 6.0.0 (6.0.21.52210), X64 RyuJIT
+  DefaultJob : .NET 6.0.0 (6.0.21.52210), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>    Mean</th><th> Error</th><th>StdDev</th><th>Rank</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>TinyCG</td><td>503.1 ns</td><td>1.75 ns</td><td>1.46 ns</td><td>1</td><td>0.2403</td><td>-</td><td>-</td><td>504 B</td>
+</tr><tr><td>SmallCG</td><td>835.1 ns</td><td>2.49 ns</td><td>2.08 ns</td><td>2</td><td>0.3786</td><td>-</td><td>-</td><td>792 B</td>
+</tr><tr><td>Tiny</td><td>980.7 ns</td><td>10.95 ns</td><td>10.24 ns</td><td>3</td><td>0.4044</td><td>-</td><td>-</td><td>848 B</td>
+</tr><tr><td>Small</td><td>1,638.8 ns</td><td>5.32 ns</td><td>4.44 ns</td><td>4</td><td>0.5417</td><td>-</td><td>-</td><td>1,136 B</td>
+</tr><tr><td>TinyNS</td><td>2,010.0 ns</td><td>10.64 ns</td><td>8.88 ns</td><td>5</td><td>0.8965</td><td>-</td><td>-</td><td>1,880 B</td>
+</tr><tr><td>SmallNS</td><td>3,462.7 ns</td><td>8.73 ns</td><td>8.17 ns</td><td>6</td><td>1.3580</td><td>-</td><td>-</td><td>2,840 B</td>
+</tr><tr><td>BigCG</td><td>139,405.0 ns</td><td>3,675.06 ns</td><td>10,836.00 ns</td><td>7</td><td>37.9639</td><td>37.2314</td><td>37.2314</td><td>135,160 B</td>
+</tr><tr><td>Big</td><td>172,130.4 ns</td><td>6,754.53 ns</td><td>19,915.90 ns</td><td>8</td><td>38.0859</td><td>37.2314</td><td>37.2314</td><td>135,497 B</td>
+</tr><tr><td>BigNS</td><td>216,521.0 ns</td><td>7,318.26 ns</td><td>21,578.05 ns</td><td>9</td><td>97.4121</td><td>57.3730</td><td>37.1094</td><td>283,523 B</td>
+</tr><tr><td>Huge</td><td>576,691.9 ns</td><td>10,964.11 ns</td><td>10,255.83 ns</td><td>10</td><td>201.1719</td><td>199.2188</td><td>199.2188</td><td>1,043,208 B</td>
+</tr><tr><td>HugeCG</td><td>644,873.7 ns</td><td>25,834.03 ns</td><td>76,172.22 ns</td><td>11</td><td>201.1719</td><td>199.2188</td><td>199.2188</td><td>1,042,796 B</td>
+</tr><tr><td>HugeNS</td><td>1,465,316.4 ns</td><td>32,341.40 ns</td><td>95,359.34 ns</td><td>12</td><td>384.7656</td><td>337.8906</td><td>203.1250</td><td>2,093,688 B</td>
+</tr></tbody></table>
+</body>
+</html>

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace JsonSerialization;
 
 [Serializable()]
-sealed record TargetObject
+public sealed record TargetObject
 {
     public string Field1 { get; init; }
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>SerializationBenchmark.TinySerializatorBenchmarker-20220315-201531</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.22567
+Unknown processor
+.NET SDK=6.0.100
+  [Host]     : .NET 6.0.0 (6.0.21.52210), X64 RyuJIT
+  DefaultJob : .NET 6.0.0 (6.0.21.52210), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Rank</th><th>Gen 0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>TinyCG</td><td>512.8 ns</td><td>6.79 ns</td><td>6.02 ns</td><td>1</td><td>0.2403</td><td>504 B</td>
+</tr><tr><td>Tiny</td><td>1,026.6 ns</td><td>16.41 ns</td><td>14.55 ns</td><td>2</td><td>0.4044</td><td>848 B</td>
+</tr><tr><td>TinyNS</td><td>2,190.8 ns</td><td>43.24 ns</td><td>57.73 ns</td><td>3</td><td>0.8965</td><td>1,880 B</td>
+</tr></tbody></table>
+</body>
+</html>
